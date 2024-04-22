@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "861030365569",
+    "firebase_url": "https://turizm-be758-default-rtdb.firebaseio.com",
+    "project_id": "turizm-be758",
+    "storage_bucket": "turizm-be758.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861030365569:android:8576ed0c5dc761690e1080",
+        "android_client_info": {
+          "package_name": "kz.sdk.turizm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4UU572zbeHDAbByueymLdpbYxE4OBa_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
