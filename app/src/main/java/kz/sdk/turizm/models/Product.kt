@@ -12,4 +12,5 @@ data class Product(
     var img:Int? = null,
     var price:Double?= null,
     var description:String? = null,
+    var hotels:List<Hotel>? = null,
 ): Parcelable

@@ -13,6 +13,9 @@ class ProductAdapter:ListAdapter<Product, BaseProductViewHolder<*>>(ProductDiffU
     var itemClick:((Product) ->Unit)? = null
 
 
+    var addButtonClicked: ((Product)->Unit)? = null
+
+
     class ProductDiffUtils:DiffUtil.ItemCallback<Product>(){
         override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
             return oldItem.id == newItem.id
@@ -39,7 +42,11 @@ class ProductAdapter:ListAdapter<Product, BaseProductViewHolder<*>>(ProductDiffU
             with(binding){
                 title.text = item.title
                 item.img?.let { imageView.setImageResource(it) }
-                price.text = "От "+item.price.toString()+" KZT"
+                price.text = "От "+item.price?.toInt().toString()+" ₸"
+                description.text = item.description
+                addBtn.setOnClickListener {
+                    addButtonClicked?.invoke(item)
+                }
 
             }
             itemView.setOnClickListener {

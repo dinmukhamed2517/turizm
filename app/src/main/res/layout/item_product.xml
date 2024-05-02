@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="200dp"
+    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="10dp"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginTop="10dp"
     app:cardCornerRadius="15dp"
-    android:layout_height="wrap_content"
+    android:layout_marginVertical="20dp"
+    android:layout_height="450dp"
 
     >
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,8 +18,8 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:src="@drawable/product_2"
+            android:layout_height="250dp"
+            android:src="@drawable/s1"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1."
@@ -28,27 +29,55 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            style="@style/Mont"
+            style="@style/Mont.SemiBold"
+            android:textSize="15sp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/blue"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            tools:text="В Египет на празники" />
+            tools:text="Великолепный Стамбул! Почувствуйте себя Султаном Сулейманом и Хюррем" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="Стамбул, это город с невероятной историей, огромным количеством достопримечательностей и просто одень душевный город!
+Бронируйте туры с прямым перелетом и почувствуй всю прелесть этого города!" />
 
         <TextView
             android:id="@+id/price"
+            style="@style/Mont.SemiBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_margin="15dp"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            style="@style/Mont"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            tools:text="от 573 000 ₸" />
+        <ImageView
+            android:id="@+id/add_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            app:tint= "@color/red"
+            android:src="@drawable/heart_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title"
-            tools:text="от 255550 KZT" />
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

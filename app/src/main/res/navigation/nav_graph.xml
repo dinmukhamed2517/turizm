@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -85,6 +88,9 @@
         <action
             android:id="@+id/action_productDetailsFragment_to_agreementFragment"
             app:destination="@id/agreementFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_hotelDetailsFragment"
+            app:destination="@id/hotelDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/agreementFragment"
@@ -112,5 +118,41 @@
         <action
             android:id="@+id/action_searchFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="kz.sdk.turizm.fragments.ProductsFragment"
+        android:label="ProductsFragment" >
+        <argument
+            android:name="country"
+            app:argType="kz.sdk.turizm.models.Country" />
+        <action
+            android:id="@+id/action_productsFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotelDetailsFragment"
+        android:name="kz.sdk.turizm.fragments.HotelDetailsFragment"
+        android:label="HotelDetailsFragment" >
+        <action
+            android:id="@+id/action_hotelDetailsFragment_to_agreementFragment"
+            app:destination="@id/agreementFragment" />
+        <argument
+            android:name="Hotel"
+            app:argType="kz.sdk.turizm.models.Hotel" />
+        <action
+            android:id="@+id/action_hotelDetailsFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="kz.sdk.turizm.fragments.MapFragment"
+        android:label="MapFragment" >
+        <argument
+            android:name="Hotel"
+            app:argType="kz.sdk.turizm.models.Hotel" />
     </fragment>
 </navigation>

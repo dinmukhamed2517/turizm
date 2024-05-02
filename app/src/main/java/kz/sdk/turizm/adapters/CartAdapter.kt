@@ -40,7 +40,7 @@ class CartAdapter: ListAdapter<Product, BaseProductViewHolder<*>>(ProductDiffUti
     inner class ProductViewHolder(binding:ItemCartBinding): BaseProductViewHolder<ItemCartBinding>(binding){
         override fun bindView(item: Product) {
             with(binding){
-                item.img?.let { img.setImageResource(it) }
+                item.img?.let { imageView.setImageResource(it) }
                 title.text = item.title
                 price.text = item.price.toString()+" KZT"
                 deleteBtn.setOnClickListener {

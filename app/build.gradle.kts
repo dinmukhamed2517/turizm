@@ -7,6 +7,8 @@ plugins {
 
     id ("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+
 
 }
 
@@ -42,6 +44,7 @@ android {
     }
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -67,6 +70,9 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
 
     implementation("com.google.firebase:firebase-analytics")
+
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+
 
 
 
