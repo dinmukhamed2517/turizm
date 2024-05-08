@@ -74,6 +74,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:18.2.0")
 
 
+    implementation("androidx.core:core-splashscreen:1.0.0")
 
 
     implementation("com.google.dagger:hilt-android:2.46")
