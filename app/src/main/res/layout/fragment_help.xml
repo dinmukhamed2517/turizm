@@ -6,14 +6,6 @@
     android:background="@color/white">
 
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/minister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
@@ -31,11 +23,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:text="Если у вас есть жалобы или предложение по улучшению, вы можете написать нам письмо"
+        android:text="Здравствуйте! Наши эскперты на связи и готовы помочь. У нас нет чат-ботов, только реальные люди. Какой ваш вопрос?"
         android:textSize="18sp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.button.MaterialButton
@@ -56,7 +49,7 @@
         android:id="@+id/til_letter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ваша письмо"
+        android:hint="Ваше письмо"
         android:layout_marginHorizontal="20dp"
         app:boxCornerRadiusBottomEnd="10dp"
         android:layout_marginTop="20dp"
